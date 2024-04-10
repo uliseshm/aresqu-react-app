@@ -1,12 +1,12 @@
 import ajustes from './assets/iconos/icon-ajustes.png'
 import './App.css'
+import BottomMenu from './components/BottomMenu'
 
 function App() {
 
   return (
     <>
-    <h1>Primera pagina</h1>
-    <img src={ajustes} className='imagen-png'/>
+    <BottomMenu/>
     </>
   )
 }

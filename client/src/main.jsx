@@ -7,7 +7,6 @@ import BottomMenu from './components/BottomMenu.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <BottomMenu/>
+    <App />
   </React.StrictMode>,
 )
