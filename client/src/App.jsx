@@ -1,11 +1,12 @@
-import ajustes from './assets/iconos/icon-ajustes.png'
 import './App.css'
 import BottomMenu from './components/BottomMenu'
+import Vendedora from './pages/Vendedoras/Vendedora'
 
 function App() {
 
   return (
     <>
+    <Vendedora/>
     <BottomMenu/>
     </>
   )
