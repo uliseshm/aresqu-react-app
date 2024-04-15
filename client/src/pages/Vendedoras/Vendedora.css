@@ -1,7 +1,38 @@
-.card-container{
+.seccion-vendedoras{
+    /* display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 90%;
+    height: calc(100% - 7rem); */
+}
+
+.cards-contenedor{
+    /* height: 90vh; */
+    /* background-color: aqua; */
+}
+
+.titulo-seccion{
+    justify-content: center;
+}
+
+.card-container-vendedora{
     border: 2px solid #ecececec;
     border-radius: .5rem;
     margin: .9rem 1rem;
     padding: .6rem;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.bici{
+    height: 3.5rem;
+}
+
+.btn-agregar-vendedora{
+    position: fixed;
+    bottom: 6rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
 }

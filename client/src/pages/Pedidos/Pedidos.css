@@ -1,0 +1,15 @@
+.card-container{
+    /* display: flex; */
+}
+
+.card-seccion-estado{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-seccion-estado img{
+    position: relative;
+    height: 3rem;
+    right: 0;
+    bottom: 0;
+}
