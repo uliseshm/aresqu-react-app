@@ -4,6 +4,7 @@
     background-color: aqua;
     height: 90%;
     height: calc(100% - 7rem); */
+    margin-bottom: 5rem;
 }
 
 .cards-contenedor{
@@ -27,12 +28,23 @@
     height: 3.5rem;
 }
 
+.clipboard{
+    height: 3.5rem;
+}
+
 .btn-agregar-vendedora{
     position: fixed;
     bottom: 6rem;
     right: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    border: none;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1rem;
+    color: chartreuse;
 }
