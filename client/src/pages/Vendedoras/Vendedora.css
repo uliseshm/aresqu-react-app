@@ -1,19 +1,17 @@
 .seccion-vendedoras{
-    /* display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    height: 90%;
-    height: calc(100% - 7rem); */
     margin-bottom: 5rem;
 }
 
 .cards-contenedor{
-    /* height: 90vh; */
-    /* background-color: aqua; */
 }
 
 .titulo-seccion{
+    display: flex;
     justify-content: center;
+    margin: 1rem .3rem;
+    border-radius: .5rem;
+    background-color: #8fff178c;
+    
 }
 
 .card-container-vendedora{
