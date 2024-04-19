@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Vendedora.css'
 import bicicleta from '../../components/bici.svg'
 import clipboard from '../../components/clipboard.svg'
 import BottomMenu from '../../components/BottomMenu'
 import { clientes } from '../../database/db.js'
+import ModalAgregarVendedora from './ModalAgregarVendedora.jsx'
 
 const Vendedora = () => {
 
-  const handleSubmit = () => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-    
+  const handleOpenModal = () => {
+    setModalOpen(true);
   }
 
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  }
+
+  // const handleClick = () => {
+  //   console.log("soy un console.log")
+    
+  // }
+
   //TODO: crear componente card y llamar aqui
+  //TODO: cargar la informacion en cada tarjeta de DB o de forma local
   return (
     <section className='seccion-vendedoras'>
       <h2 className='titulo-seccion'>Sección Clientes</h2>
@@ -61,7 +73,8 @@ const Vendedora = () => {
 
       </section>
 
-      <button className='btn-agregar-vendedora' onSubmit={handleSubmit}>+</button>
+      <button className='btn-agregar-vendedora' onClick={handleOpenModal}>+</button>
+      <ModalAgregarVendedora isOpen={modalOpen} onClose={handleCloseModal}/>
 
     </section>
   )
