@@ -6,7 +6,7 @@ import Vendedora from './pages/Vendedoras/Vendedora.jsx'
 import BottomMenu from './components/BottomMenu.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+   <React.StrictMode>
+     <App />
+   </React.StrictMode>,
 )

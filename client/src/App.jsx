@@ -9,7 +9,6 @@ function App() {
     <>
     <section className='contenedor-principal'>
     <Vendedora/>
-    {/* <Pedidos/> */}
     </section>
     <BottomMenu/>
     </>

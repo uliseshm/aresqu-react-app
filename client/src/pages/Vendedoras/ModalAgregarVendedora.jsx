@@ -3,7 +3,7 @@ import { clientes } from '../../database/db'
 import './ModalAgregarVendedora.css'
 //import fs from 'fs'
 
-const ModalAgregarVendedora = ({ isOpen, onClose }) => {
+const ModalAgregarVendedora = ({ isOpen, onClose, addVendedora }) => {
 
     //definimos donde se guardaran los datos del formulario
     const [formData, setFormData] = useState({
@@ -14,8 +14,6 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
         telefono: ''
     })
 
-    const [dataBaseClientes, setDataBaseClientes] = useState(clientes);
-
     //obtenemos los datos del formulario
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -23,11 +21,13 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
             ...formData,
             [name]: value
         }));
+
     }
 
     //agregamos los datos en DB, en este caso de forma local
     const handleSubmit = (event) => {
         event.preventDefault()
+        addVendedora(formData)
         console.log(formData)
         console.log("formulario enviado");
         setFormData({
@@ -39,11 +39,15 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
         })
 
         setTimeout(() => {
+            
             onClose();
-            }, 2000);
+            }, 1000);
     }
 
 
+    
+
+    
 
     return (
 
@@ -86,7 +90,7 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
                         onChange={handleChange}
                         placeholder="Telefono de la vendedora"
                     />
-                    <button type="submit" className='modal-submit'>Enviar</button>
+                    <button type="submit"  className='modal-submit'>Enviar</button>
                 <button onClick={onClose} className='modal-close'>Cerrar</button>
                 </form>
             </div>
