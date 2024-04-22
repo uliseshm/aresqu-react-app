@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import './Vendedora.css'
 import bicicleta from '../../components/bici.svg'
 import clipboard from '../../components/clipboard.svg'
-import BottomMenu from '../../components/BottomMenu'
 import { clientes } from '../../database/db.js'
 import ModalAgregarVendedora from './ModalAgregarVendedora.jsx'
+import { CardVendedora } from './CardVendedora.jsx'
 
 const Vendedora = () => {
 
@@ -69,6 +69,9 @@ const Vendedora = () => {
         <p className='puntos-vendedora'><span>Puntos:</span> {clientes[4].puntos}</p>
         <p className='telefono-vendedora'><span>Teléfono:</span> {clientes[4].telefono}</p>
       </div>
+      {/* {vendedoras.map(vendedora =>{
+        <CardVendedora/>
+      })} */}
      
 
       </section>

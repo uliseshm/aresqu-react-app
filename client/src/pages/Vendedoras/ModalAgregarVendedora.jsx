@@ -30,10 +30,6 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
         event.preventDefault()
         console.log(formData)
         console.log("formulario enviado");
-
-        // setTimeout(() => {
-        //     onClose();
-        //     }, 4000);
         setFormData({
             nombre: '',
             direccion: '',
@@ -41,6 +37,10 @@ const ModalAgregarVendedora = ({ isOpen, onClose }) => {
             puntos: '',
             telefono: ''
         })
+
+        setTimeout(() => {
+            onClose();
+            }, 2000);
     }
 
 

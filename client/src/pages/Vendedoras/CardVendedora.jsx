@@ -1,14 +1,14 @@
 import React from 'react'
 import { clientes } from '../../database/db'
 
-export const CardVendedora = (props) => {
+export const CardVendedora = ({nombre, direccion, ruta, puntos, telefono}) => {
   return (
     <div className="card-container-vendedora">
         <h3 className='nombre-vendedora'>Nombre Vendedora: {nombre}</h3>
-        <p className='direccion-vendedora'>Dirección: Monte Olimpo #329</p>
-        <p className='ruta-vendedora'>Ruta: DGO</p>
-        <p className='puntos-vendedora'>Puntos: 21000</p>
-        <p className='telefono-vendedora'>Teléfono: 00 46 46 99 01</p>
+        <p className='direccion-vendedora'>Dirección: {direccion}</p>
+        <p className='ruta-vendedora'>Ruta: {ruta}</p>
+        <p className='puntos-vendedora'>Puntos: {puntos}</p>
+        <p className='telefono-vendedora'>Teléfono: {telefono}</p>
         <img src={bicicleta} alt="bicicleta" className='bici' />
         <img src={clipboard} alt="clipboard" className='clipboard'/>
       </div>
