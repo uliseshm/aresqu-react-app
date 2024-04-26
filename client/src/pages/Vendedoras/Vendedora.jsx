@@ -25,7 +25,12 @@ const Vendedora = () => {
   const [arrayVendedoras, setArrayVendedoras] = useState([])
 
 
-
+  //mostrar todas las vendedoras
+  // const listaActualVendedoras = arrayVendedoras.map((clienta) => {
+  //   return (
+  //     <CardVendedora datos={clienta} />
+  //   )
+  // });
 
   //se reciben los datos del componente formulario y
   //se guardan en datosFormulario para despues mandarlos
@@ -33,9 +38,9 @@ const Vendedora = () => {
   const addVendedora = (datosFormulario) => {
     setDatosFormulario(datosFormulario);
     setArrayVendedoras([...arrayVendedoras, datosFormulario])
-    console.log(datosFormulario.nombre);
-    console.log(datosFormulario.direccion);
-    console.log(arrayVendedoras)
+
+    //console.log(arrayVendedoras)
+
   }
 
 
@@ -48,8 +53,10 @@ const Vendedora = () => {
 
       <section className='cards-contenedor'>
 
-        {datosFormulario && <CardVendedora datos={datosFormulario}/>}
-        
+        {/* {datosFormulario && <CardVendedora datos={datosFormulario} />} */}
+        {/* mostramos todas las clientas disponibles */}
+        {arrayVendedoras.map((clienta) => <CardVendedora datos={clienta} />)}
+
         <div className="card-container-vendedora">
           <h3 className='nombre-vendedora'>{clientes[0].nombre}</h3>
           <p className='direccion-vendedora'><span>Dirección:</span> {clientes[0].direccion}</p>
